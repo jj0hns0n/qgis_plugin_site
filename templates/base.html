@@ -33,18 +33,16 @@
             <div class="container">
                 <a href="/" rel="home" id="logo"><img src="/static/img/logo.png"></a>
                 <div class="pull-right">
-                    <!--
                     <div class="pull-left">
                         <div class="menu-main-container">
                             <ul id="menu-main" class="menu">
-                                <li><a href="http://boundlessgeo.com/solutions/">Solutions</a></li>
-                                <li><a href="http://boundlessgeo.com/resources/">Resources</a></li>
-                                <li><a href="http://boundlessgeo.com/about/">About</a></li>
-                                <li><a href="http://boundlessgeo.com/support/">Support</a></li>
+                                <li><a href="/">Plugins</a></li>
+                                <li><a href="/docs/">Documentation</a></li>
+                                <li><a href="/tutorials/">Tutorials</a></li>
+                                <li><a href="/support/">Support</a></li>
                             </ul>
                         </div>
-                    </div>-->
-                    <!--
+                    </div>
                     <div class="search dropdown">
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="search-icon"></i></a>
                           <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
@@ -56,22 +54,20 @@
                                   <input type="hidden" name="area" value="default" />
                                 </form>
                           </div>
-                    </div>-->
+                    </div>
                 </div>
             </div><!--closes container-->
 
         </header><div id="pageheading"><div class="contents"><h1>{% block pagetitle %}{% endblock %}</h1></div></div>
 
-<div id="content" class="contents">
-    <div id="breadcrumbs"></div>
-    <div class="section" id="introduction-to-opengeo-suite">
-    {% block content %}{% endblock %}
+    <div id="content" class="contents">
+        <div id="breadcrumbs">
+        </div>
+
+        <div class="section">
+            {% block content %}{% endblock %}
+        </div>
     </div>
-
-
-  </div> <!-- rightbar_bar -->
-
-  </div> <!-- content -->
   <div id="footer">
     <footer id="colophon" class="site-footer" role="contentinfo">
         <div class="container">
