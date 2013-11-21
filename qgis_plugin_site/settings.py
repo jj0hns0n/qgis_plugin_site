@@ -97,12 +97,14 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.RemoteUserMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_sorting.middleware.SortingMiddleware',
     'pagination.middleware.PaginationMiddleware',
+    'plugins.middleware.HttpAuthMiddleware',
 )
 
 ROOT_URLCONF = 'qgis_plugin_site.urls'
@@ -132,7 +134,7 @@ INSTALLED_APPS = (
     'django_sorting',
     'pagination',
     'sorl.thumbnail',
-
+    'rpc4django',
     'plugins',
 )
 
